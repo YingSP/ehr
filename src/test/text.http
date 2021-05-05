@@ -1,0 +1,27 @@
+POST http://localhost/user
+content-type: application/json;charset=utf-8
+
+{
+  "username": "zhaoliu",
+  "password": "1234",
+  "name": "赵六",
+  "phone": "13414543"
+}
+
+###
+DELETE http://localhost/user/8
+
+###
+POST http://localhost/user/update
+content-type: application/json;charset=utf-8
+
+{
+  "username": "zqq",
+  "password": "1234",
+  "name": "张倩倩",
+  "phone": "13414543",
+  "id": "1"
+}
+
+###
+GET http://localhost/user/1
