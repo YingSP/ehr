@@ -4,10 +4,12 @@ import edu.nuist.ehr.bean.Role;
 import edu.nuist.ehr.dao.RoleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional//开启mysql数据库的本地事务
 public class RoleService {
     @Autowired
     private RoleDao roleDao;

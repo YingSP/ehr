@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 @Service
+@Transactional//开启mysql数据库的本地事务
 public class UserService {
     @Autowired
     private UserDao userDao;
@@ -17,7 +18,7 @@ public class UserService {
     public List<User> findAll(){
         return userDao.findAll();
     }
-    @Transactional(isolation = Isolation.READ_COMMITTED)//开启mysql数据库的本地事务
+
     public void insert(User user){
         userDao.insert(user);
         userDao.insertManyUserRole(user);
